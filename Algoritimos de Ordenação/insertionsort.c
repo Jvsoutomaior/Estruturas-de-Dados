@@ -1,12 +1,15 @@
 #include <stdio.h>
 
-void ordenacao(int *array, int size){
-    int num, j;
-    for(int i = 0; i < size; i++){
-        num = array[i];
-        for(j = i-1; j >= 0 && array[j] > num; j++){
-            array[j+1] = array[j];
+void insertionSort(int arr[], int n) {
+    int i, key, j;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
+
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
         }
-        array[j+1] = num;
+        arr[j + 1] = key;
     }
 }
