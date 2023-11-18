@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int ordenacao(int *array, int size){
+void ordenacao(int *array, int size){
     int num, j;
     for(int i = 0; i < size; i++){
         num = array[i];
